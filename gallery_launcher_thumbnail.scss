@@ -1,0 +1,52 @@
+
+.gallery-launcher-thumbnail-container {
+  @include display-flex;
+  background-color: $white;
+  border: 1px solid $dark-snow;
+  cursor: pointer;
+  height: 130px;
+  margin-top: -22px;
+  padding: 5px;
+  width: 130px;
+
+  &.disabled {
+    cursor: default;
+  }
+}
+
+.launcher-image-thumbnail {
+  @include display-flex;
+  background-color: $white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: flex-end;
+}
+
+.gallery-launcher-counter {
+  background-color: $coal;
+  border-radius: 2px;
+  color: $white;
+  display: inline-table;
+  font-size: 9px;
+  font-weight: $font-weight-light;
+  letter-spacing: .8px;
+  margin: 5px;
+  opacity: .75;
+  padding-bottom: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 1px;
+  text-align: center;
+}
+
+.gallery-launcher-student-ribbon {
+  @include display-flex;
+  background-color: transparentize($dark-yellow, .5);
+  color: $white;
+  font-size: 11px;
+  font-weight: $font-weight-normal;
+  justify-content: center;
+  margin-top: 75px;
+  padding: 1px;
+}

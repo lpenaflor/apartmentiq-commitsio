@@ -1,0 +1,43 @@
+
+.tooltip-icon {
+  cursor: pointer;
+  max-width: 25px;
+  text-align: center;
+}
+
+.tooltip-panel-container {
+  @include box-shadow(0 2px 2px transparentize($black, .8));
+  @include display-flex;
+  background-color: $white;
+  margin-left: 45px;
+  margin-top: -54px;
+  max-width: 455px;
+  padding: 15px;
+  position: absolute;
+  z-index: 3;
+
+  &.fixed {
+    position: fixed;
+  }
+
+  .tooltip-content {
+    cursor: text;
+    font-size: $search-filters-title-font-size;
+    font-weight: $font-weight-normal;
+    text-align: left;
+  }
+
+  .arrow {
+    border-color: transparent $white;
+    border-style: solid;
+    border-width: 20px 20px 20px 0;
+    display: block;
+    filter: drop-shadow(-6px 0 8px transparentize($black, .8));
+    left: -20px;
+    margin-top: -50px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    z-index: -1;
+  }
+}

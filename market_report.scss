@@ -1,0 +1,183 @@
+.intelligence-select {
+  @include no-appearance();
+
+  background: transparent;
+  border: 0;
+  color: $light-dark-text;
+  cursor: pointer;
+  height: 30px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 18px;
+  padding-top: 5px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.intelligence-select-container {
+  background: $white;
+  border: 1px solid $dark-smoke;
+  min-width: 35px;
+  position: relative;
+
+  &::after {
+    color: $light-dark-text;
+    content: $fa-var-sort-desc;
+    display: block;
+    font-family: FontAwesome;
+    font-size: 12px;
+    position: absolute;
+    right: 7px;
+    top: 3px;
+  }
+}
+
+.market-report-title {
+  margin-top: 0;
+}
+
+.market-section-title {
+  margin-bottom: 30px;
+  margin-top: 0;
+  color: $dark-text;
+}
+
+.market-chart-title {
+  font-size: 16px;
+  font-weight: $font-weight-bold;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  color: $dark-text;
+}
+
+.chart-loader {
+  background-color: $transparent-white-7;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+
+.chart-loader-svg {
+  margin: auto;
+}
+
+.loader-parent {
+  position: relative;
+}
+
+.floorplan-chart-switcher {
+  margin-left: 30px;
+  margin-top: 3px;
+  position: absolute;
+  z-index: 1;
+
+  .intelligence-checkbox-label {
+    color: $light-dark-text;
+    font-size: 11px;
+  }
+}
+
+.recharts-legend-item {
+  .recharts-legend-item-text {
+    color: $light-dark-text;
+    font-size: 11px;
+  }
+}
+
+.amenities-chart {
+  .recharts-y-axis {
+    .recharts-cartesian-axis-tick-value {
+      font-size: 14px;
+    }
+  }
+
+  .recharts-x-axis {
+    .recharts-cartesian-axis-tick-value {
+      font-size: 10px;
+    }
+  }
+}
+
+.floorplans-chart {
+  .recharts-x-axis {
+    .recharts-cartesian-axis-tick-value {
+      font-size: 14px;
+    }
+  }
+
+  .recharts-y-axis {
+    .recharts-cartesian-axis-tick-value {
+      font-size: 10px;
+    }
+  }
+}
+
+.bar-label {
+  fill: $light-dark-text;
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+}
+
+.floorplan-chart-tooltip {
+  background-color: transparentize($dark-snow, .05);
+  border: 2px solid $dark-smoke;
+  padding: 15px;
+
+  .floorplan-chart-tooltip-category {
+    color: $dark-text;
+    font-size: 13px;
+    font-weight: $font-weight-bold;
+  }
+
+  .floorplan-chart-tooltip-subcategory {
+    color: $light-dark-text;
+    font-size: 11px;
+  }
+
+}
+
+.DateInput__display-text--focused {
+  background: $light-orange;
+  border-color: $light-orange;
+  color: $white;
+}
+
+.DateRangePicker {
+  z-index: 2;
+}
+
+.CalendarDay--selected-span,
+.CalendarDay--hovered-span,
+.CalendarDay--after-hovered-start {
+  background: $light-orange;
+  border-color: $dark-orange;
+  color: $white;
+}
+
+.CalendarDay--selected-start,
+.CalendarDay--selected-end,
+.CalendarDay--selected {
+  background: $dark-orange;
+  border-color: $dark-orange;
+  color: $white;
+
+  &:active {
+    background: $dark-orange;
+    border-color: $dark-orange;
+    color: $white;
+  }
+}
+
+.CalendarDay--selected-span.CalendarDay--hovered {
+  background: $orange;
+  border-color: $dark-orange;
+}

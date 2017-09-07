@@ -1,0 +1,18 @@
+.rent-special-data-table {
+  .public_fixedDataTable_header .public_fixedDataTableCell_wrap3 {
+    background-color: $snow;
+    color: $slate;
+    font-size: 14px;
+    font-weight: $font-weight-bold;
+  }
+
+  .fixedDataTableLayout_main {
+    border: 0;
+  }
+
+  .fixedDataTableCellGroupLayout_cellGroup {
+    .fixedDataTableCellLayout_main:last-child {
+      border-right: 0;
+    }
+  }
+}

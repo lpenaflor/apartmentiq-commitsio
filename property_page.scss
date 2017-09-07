@@ -1,0 +1,137 @@
+.properties-container-react {
+  background-color: $intelligence-page-background;
+  color: $dark-text;
+
+  .box-title {
+    color: $dark-text;
+  }
+}
+
+.property-page-map {
+  height: 210px;
+  width: 100%;
+}
+
+.property-page-marker {
+  background-color: transparentize($orange, .5);
+  border: 1px solid $dark-orange;
+  border-radius: 36px;
+  height: 36px;
+  margin-left: -18px;
+  margin-top: -18px;
+  width: 36px;
+}
+
+.property-page-summary {
+  background-color: $white;
+  height: 143px;
+  width: 100%;
+  z-index: 1;
+}
+
+.property-summary-groups {
+  padding-top: 34px;
+}
+
+.property-summary-group {
+  float: left;
+  height: 68px;
+  width: 120px;
+
+  &:not(:first-child) {
+    border-left: 1px solid $dark-snow;
+  }
+}
+
+.property-summary-title {
+  color: $silver;
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+  text-align: center;
+}
+
+.property-summary-content {
+  color: $dark-text;
+  font-size: 24px;
+  font-weight: $font-weight-bold;
+  padding-bottom: 10px;
+  text-align: center;
+
+  .amenity-svg {
+    height: 26px;
+  }
+}
+
+.property-page-photo {
+  height: 150px;
+  width: 150px;
+}
+
+.property-description-group {
+  padding-top: 10px;
+
+  .last-updated {
+    color: $silver;
+    font-size: 10px;
+    font-weight: $font-weight-bold;
+  }
+
+  .name {
+    color: $dark-text;
+    font-size: 24px;
+    font-weight: $font-weight-bold;
+    padding-top: 2px;
+  }
+
+  .description-line {
+    color: $silver;
+    font-size: 14px;
+    font-weight: $font-weight-bold;
+  }
+
+  .tag {
+    background-color: $blue;
+    border-radius: 3px;
+    color: $white;
+    display: inline-block;
+    font-size: 10px;
+    margin-top: 4px;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+  }
+}
+
+.property-page-date-range {
+  color: $slate;
+  font-weight: $font-weight-bold;
+  line-height: 35px;
+  padding: 0 10px;
+}
+
+.floorplan-data-table {
+  .public_fixedDataTable_header.public_fixedDataTableRow_even .public_fixedDataTableCell_wrap3 {
+    background-color: $snow;
+    color: $slate;
+    font-size: 14px;
+    font-weight: $font-weight-bold;
+  }
+
+  .public_fixedDataTable_main {
+    border: 0;
+  }
+
+  .public_fixedDataTableCell_main:last-child {
+    border-right: 0;
+  }
+}
+
+.viewed-or-contacted-picker {
+  flex-grow: 4;
+  margin-left: 15px;
+}
+
+.bedroom-picker {
+  flex-grow: 6;
+}

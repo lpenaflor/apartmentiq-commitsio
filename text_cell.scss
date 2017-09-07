@@ -1,0 +1,13 @@
+.no-wrap-text-cell {
+  @include display-flex;
+  white-space: nowrap;
+}
+
+.wrapping-left-text-cell {
+  @include display-flex;
+  text-align: left;
+}
+
+.wrapping-text-cell {
+  @include display-flex;
+}

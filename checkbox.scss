@@ -1,0 +1,10 @@
+.intelligence-checkbox-label {
+  color: $dark-text;
+  display: block;
+  font-size: $search-filters-input-font-size;
+  margin-right: 30px;
+
+  .intelligence-checkbox-input {
+    margin-right: 5px;
+  }
+}

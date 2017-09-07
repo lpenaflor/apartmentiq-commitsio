@@ -1,0 +1,169 @@
+.left-nav {
+  background-color: $steel;
+  min-width: $left-nav-width;
+  width: $left-nav-width;
+}
+
+.left-nav-header {
+  @include display-flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.left-nav-header-logo {
+  height: 34px;
+  margin-bottom: 16px;
+  margin-left: 14px;
+  margin-top: 16px;
+  overflow: hidden;
+  width: 32px;
+
+  img {
+    height: 34px;
+    width: 110px;
+  }
+
+  .logo-background {
+    fill: $white;
+  }
+
+  .logo-house {
+    fill: $steel;
+  }
+}
+
+
+.left-nav-category {
+  @include display-flex;
+  align-items: center;
+  color: $extra-dark-smoke;
+  font-weight: $font-weight-bold;
+  padding-bottom: 8px;
+  padding-left: $left-nav-button-margin-left;
+  padding-top: 8px;
+
+  &.selectable {
+    cursor: pointer;
+
+    &:hover i {
+      color: $white;
+    }
+  }
+
+  .category-label {
+    flex: 2 0 0;
+  }
+
+  .category-fa {
+    font-size: 14px;
+    margin-left: 9px;
+    margin-right: 16px;
+  }
+}
+
+.left-nav-button {
+  @include display-flex;
+  align-items: center;
+  color: $white;
+  cursor: pointer;
+  font-size: $left-nav-button-font-size;
+  font-weight: $font-weight-bold;
+  padding-bottom: 6px;
+  padding-left: $left-nav-button-margin-left;
+  padding-top: 6px;
+
+  &.selected {
+    border-left-color: $orange;
+    border-left-style: solid;
+    border-left-width: 3px;
+    padding-left: 13px;
+  }
+
+  &:hover {
+    background-color: $dark-text;
+    color: $white;
+  }
+
+  .button-label {
+    flex: 2 0 0;
+  }
+
+  &.truncate {
+    display: inline-block;
+    padding-bottom: 0;
+    width: 160px;
+  }
+}
+
+.left-nav-button-badge {
+  border-color: $white;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 10px;
+  font-weight: $font-weight-normal;
+  margin-left: 11px;
+  margin-right: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.left-nav-separator {
+  background-color: $slate;
+  height: 1px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  width: 100%;
+}
+
+.input-override {
+
+  // overriding here because of selectors of `input[type=]` in home.scss
+  &.left-nav-text-input {
+    background-color: $steel;
+    border-color: $steel;
+    color: $white;
+    font-size: 13px;
+    font-weight: $font-weight-bold;
+    padding: 2px 15px;
+  }
+
+  &.left-nav-text-input-filter {
+    background-color: $slate;
+    border-color: $slate;
+    color: $white;
+    font-size: 13px;
+    font-weight: $font-weight-bold;
+    height: 30px;
+    margin-left: 0;
+    padding: 4px;
+
+    &::placeholder {
+      color: $silver;
+    }
+  }
+}
+
+.left-nav-fa-search {
+  @include display-flex();
+  align-items: center;
+  color: $light-dark-text;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+.left-nav-text-input-filter-container {
+  background-color: $slate;
+  border-radius: 4px;
+  color: $white;
+  font-size: 13px;
+  font-weight: $font-weight-light;
+  letter-spacing: .8px;
+  margin: 5px 16px;
+  padding-bottom: 1px;
+  padding-right: 3px;
+  padding-top: 1px;
+  text-align: center;
+}

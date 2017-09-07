@@ -1,0 +1,262 @@
+.flex-row-only {
+  @include display-flex;
+  flex-direction: row;
+}
+
+.flex-column-only {
+  @include display-flex;
+  flex-direction: column;
+}
+
+.flex-self-align-top {
+  @include display-flex;
+  align-self: flex-start;
+}
+
+.flex-self-align-bottom {
+  @include display-flex;
+  align-self: flex-end;
+}
+
+.flex-align-center {
+  @include display-flex;
+  align-items: center;
+}
+
+.market-search-container-react {
+  @include display-flex;
+  width: 100%;
+}
+
+.stretch {
+  @include display-flex;
+  height: 100%;
+  width: 100%;
+}
+
+.stretch-column {
+  @include display-flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.full-height {
+  min-height: 100vh;
+}
+
+.market-report-top-container {
+  padding: 15px;
+}
+
+.search-grid-container {
+  @include display-flex;
+  flex: 1;
+}
+
+.market-search-text-filter-container {
+  background-color: $white;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: $font-weight-bold;
+  text-align: center;
+}
+
+.market-search-fa-search {
+  @include display-flex();
+  align-items: center;
+  color: $coal;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 8px;
+}
+
+.intelligence-well {
+  background-color: $white;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.intelligence-container {
+  background-color: $intelligence-page-background;
+  min-height: calc(100vh - 115px);
+  padding: 20px;
+  width: 100%;
+}
+
+.tab-bar {
+  margin-top: 0;
+}
+
+.tab-background-container {
+  height: 0;
+  position: relative;
+}
+
+.tab-background {
+  background-color: $intelligence-page-light-background;
+  height: 54px;
+  position: absolute;
+  width: 100%;
+}
+
+.tab-content {
+  z-index: 1;
+}
+
+.tab {
+  color: $dark-text;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+  height: 54px;
+  margin-bottom: 0;
+  margin-left: 15px;
+  margin-right: 100px;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 17px;
+
+  &.on {
+    border-bottom: solid 5px $coal;
+  }
+}
+
+.tooltip-icon {
+  margin-left: 10px;
+}
+
+.data-table-cell-link {
+  color: $dark-blue;
+
+  &:hover {
+    color: $dark-blue;
+  }
+}
+
+.button-bar-container {
+  input {
+    display: none;
+  }
+
+  .intelligence-checkbox-label {
+    background-color: $white;
+    border-bottom: 1px solid $dark-smoke;
+    border-right: 1px solid $dark-smoke;
+    border-top: 1px solid $dark-smoke;
+    color: $dark-text;
+    cursor: pointer;
+    flex-grow: 1;
+    margin-right: 0;
+    padding: 5px;
+    text-align: center;
+
+    &:first-child {
+      border-bottom-left-radius: 3px;
+      border-left: 1px solid $dark-smoke;
+      border-top-left-radius: 3px;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+
+    &.selected {
+      background-color: $orange;
+      color: $white;
+    }
+
+    &.disabled:not(.selected) {
+      color: $silver;
+    }
+
+    &.disabled.selected {
+      background-color: $light-orange;
+    }
+  }
+}
+
+// Type-ahead stuff starts here
+.bootstrap-typeahead .dropdown-menu > li a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bootstrap-typeahead .dropdown-menu > li a:focus {
+  outline: none;
+}
+
+.bootstrap-typeahead .dropdown-menu-justify {
+  right: 0;
+}
+
+// Hide IE's native "clear" button
+.bootstrap-typeahead input[type=text]::-ms-clear {
+  display: none;
+}
+
+.bootstrap-typeahead-menu-paginator {
+  text-align: center;
+}
+
+// Input sizes
+.bootstrap-tokenizer {
+  padding-bottom: 2px;
+  padding-top: 5px;
+}
+
+.input-sm.bootstrap-tokenizer {
+  padding-bottom: 1px;
+  padding-top: 4px;
+}
+
+.input-lg.bootstrap-tokenizer {
+  padding-bottom: 6px;
+  padding-top: 9px;
+}
+
+.bootstrap-tokenizer-input {
+  margin: 1px 0 4px;
+}
+
+.has-aux {
+  padding-right: 32px;
+
+  .input-lg {
+    padding-right: 42px;
+  }
+}
+
+// Fix styles when used with input-group
+.input-group .bootstrap-typeahead:first-child .form-control {
+  border-radius: 4px 0 0 4px;
+}
+
+.input-group .bootstrap-typeahead:last-child .form-control {
+  border-radius: 0 4px 4px 0;
+}
+
+// Type-ahead stuff ends here
+
+.react-modal-overlay {
+  background-color: transparentize($smoke, .05);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.save-comp-report-modal {
+  background-color: $intelligence-page-light-background;
+  border: 0;
+  left: 45%;
+  margin-left: -100px;
+  outline: none;
+  position: absolute;
+  top: 30%;
+  width: 500px;
+}

@@ -1,0 +1,49 @@
+
+// This overrides vendor/assets/stylesheets/fixed-data-table.min.js
+.public_fixedDataTableRow_highlighted,
+.public_fixedDataTableRow_highlighted .public_fixedDataTableCell_main {
+  background-color: $white;
+}
+
+.public_fixedDataTable_header,
+.public_fixedDataTable_header .public_fixedDataTableCell_main {
+  @include display-flex;
+  align-items: center;
+  background-color: $white;
+  background-image: linear-gradient($white, $white);
+  border-bottom-color: $extra-dark-smoke;
+  border-top-style: none;
+  font-size: $search-filters-input-font-size;
+  justify-content: center;
+
+  a {
+    color: $slate;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.public_fixedDataTableCell_main {
+  background-color: $snow;
+  border-color: $dark-smoke;
+  border-top: thin solid $dark-smoke;
+  font-size: $search-filters-title-font-size;
+}
+
+.fixedDataTableCellGroupLayout_cellGroup > .public_fixedDataTableCell_main {
+  @include display-flex;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: normal;
+
+  &.fixedDataTableCellLayout_alignCenter {
+    justify-content: center;
+  }
+}
+
+// known issue - this style is overriding first-child so we truncate cell
+.fixedDataTableCellLayout_wrap3 {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}

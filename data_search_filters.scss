@@ -1,0 +1,430 @@
+%button-base {
+  background-color: $white;
+  border-color: $silver;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  font-weight: $font-weight-bold;
+  padding: 15px;
+
+  .filter-fa {
+    font-size: 16px;
+    margin-right: 6px;
+  }
+}
+
+.filter-button {
+  @extend %button-base;
+  justify-content: center;
+  width: 100px;
+}
+
+.search-filters-container {
+  background-color: $extra-dark-smoke;
+  padding: 5px 15px;
+  display: flex;
+  flex-flow: row;
+
+  .filter-button {
+    @extend %button-base;
+
+    background-color: transparent;
+    border: 0;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    padding: 0 15px;
+    width: initial;
+
+    &.selected {
+      background-color: $smoke;
+    }
+
+    .filter-fa {
+      line-height: 30px;
+    }
+  }
+}
+
+.market-report-date-range-picker {
+  min-width: 336px;
+}
+
+.market-search-text-filter {
+  @include input-placeholder-color($extra-dark-smoke);
+  @include input-placeholder-font-size(14px);
+
+  border: 0;
+  border-radius: 5px;
+  color: $steel;
+  font-size: 14px;
+  height: 30px;
+  width: 340px;
+
+  &::before {
+    color: $coal;
+    content: $fa-var-search;
+    display: block;
+    font-family: FontAwesome;
+    font-size: 20px;
+    height: 20px;
+    position: absolute;
+    right: 8px;
+    top: 12px;
+    width: 20px;
+  }
+}
+
+.filter-panel-apply-button {
+  @extend %button-base;
+  background-color: $orange;
+  border-color: $light-orange;
+  color: $white;
+  padding: 10px 20px;
+
+  &:disabled {
+    background-color: $light-orange;
+  }
+}
+
+.filter-panel-clear-button {
+  @extend %button-base;
+  background-color: $white;
+  border-color: $extra-dark-smoke;
+  color: $slate;
+  margin-right: 10px;
+  padding: 10px 20px;
+}
+
+.filter-panel-container {
+  @include box-shadow(0 2px 2px transparentize($black, .8));
+  margin-top: 13px;
+  position: absolute;
+  z-index: $search-filters-z-index; // same as consumer side
+}
+
+.filter-advanced-container {
+  background-color: $intelligence-page-light-background;
+  padding: 8px;
+  width: 500px;
+}
+
+.rules-filter-container {
+  background-color: $white;
+  border: 1px solid $dark-smoke;
+  padding: 8px;
+  width: 500px;
+}
+
+.data-table-column-selector-container {
+  background-color: $white;
+  border: 1px solid $dark-smoke;
+  padding: 8px;
+  width: 300px;
+}
+
+.filter-slider-container {
+  margin: 10px 20px;
+
+  .filter-slider {
+    .rheostat-progress {
+      background-color: $orange;
+      height: .8em;
+    }
+
+    .rheostat-background {
+      background-color: $white;
+      border-radius: 10px;
+      height: .8em;
+    }
+
+    .rheostat-handle {
+      border-radius: 35%;
+      height: 1.3em;
+      margin-top: 2px;
+      width: 1.3em;
+    }
+
+    .rheostat-horizontal {
+      height: 10px;
+    }
+  }
+}
+
+.filter-price-container {
+  @include display-flex;
+  justify-content: space-between;
+
+  .money {
+    color: $slate;
+    font-size: $search-filters-small-font-size;
+    margin-top: 5px;
+  }
+}
+
+.filter-input-container {
+  @include display-flex;
+  flex-direction: column;
+  margin-bottom: 6px;
+}
+
+.filter-button-container {
+  @include display-flex;
+  justify-content: flex-end;
+
+  .error-message-text {
+    @include display-flex;
+    align-items: center;
+    font-weight: $font-weight-bold;
+    margin-right: 20px;
+  }
+}
+
+.filter-column {
+  @include display-flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.filter-title {
+  color: $light-dark-text;
+  font-size: $search-filters-title-font-size;
+  font-weight: $font-weight-normal;
+  margin: 10px 0;
+}
+
+.input-override {
+  // overriding here because of selectors of `input[type=]` in home.scss
+  &.filter-input {
+    @include input-placeholder-color($dark-snow);
+    border: 1px solid $dark-smoke;
+    font-size: $search-filters-input-font-size;
+    margin-right: 10px;
+    padding: 5px;
+    width: 60px;
+  }
+}
+
+.filter-slider {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 20px;
+}
+
+.filter-tag-slider-arrow {
+  background-color: $white;
+  color: $smoke;
+  font-size: 24px;
+  height: 100%;
+  opacity: .5;
+  padding-top: 7px;
+  position: absolute;
+  width: 30px;
+  z-index: 1;
+
+  &.active {
+    color: $silver;
+    cursor: pointer;
+    opacity: .7;
+  }
+
+  &.arrow-left {
+    left: 0;
+    padding-left: 5px;
+  }
+
+  &.arrow-right {
+    padding-left: 7px;
+    right: 0;
+  }
+}
+
+.market-report-filters-col {
+  min-width: 100px;
+}
+
+.filter-tag-slider-holder {
+  position: relative;
+}
+
+.filter-tag-container {
+  @include display-flex;
+
+  .filter-tag {
+    background-color: $light-purple;
+    margin-bottom: 0;
+    margin-right: 10px;
+    padding: 16px;
+
+    &:first-child {
+      margin-left: 10px;
+    }
+
+    .filter-tag-close {
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  }
+}
+
+.inline-add-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.filter-select-container {
+  background: $dark-snow;
+  border-radius: 3px;
+  margin: 2px 4px;
+  min-width: 35px;
+  position: relative;
+
+  &::after {
+    color: $coal;
+    content: $fa-var-sort-desc;
+    display: block;
+    font-family: FontAwesome;
+    font-size: 12px;
+    position: absolute;
+    right: 7px;
+    top: 3px;
+  }
+}
+
+.filter-select {
+  @include no-appearance();
+
+  background: transparent;
+  border: 0;
+  color: $coal;
+  cursor: pointer;
+  height: 100%;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 18px;
+  padding-top: 5px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.filter-rule-value-container {
+  flex-grow: 1;
+  padding: 2px 4px;
+
+  .bootstrap-typeahead-input-hint,
+  .bootstrap-typeahead-input-main,
+  .filter-rule-value {
+    @include no-appearance();
+
+    background: $dark-snow;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: none;
+    color: $coal;
+    font-size: 12px;
+    height: 100%;
+    padding: 5px;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .bootstrap-typeahead-menu {
+    li {
+      margin: 0;
+
+      a {
+        padding: 3px 8px;
+      }
+
+      &.active {
+        a {
+          background-color: $dark-snow;
+          color: $coal;
+        }
+      }
+    }
+  }
+}
+
+.filter-panel-title {
+  color: $extra-dark-smoke;
+  text-align: center;
+  width: 36px;
+}
+
+.filter-panel-filters {
+  padding-left: 5px;
+}
+
+.filter-rule {
+  align-items: center;
+  border-left: 2px solid $smoke;
+  display: flex;
+  flex-direction: row;
+  margin-left: 14px;
+  padding-left: 14px;
+}
+
+.filter-rule-delete {
+  color: $extra-dark-smoke;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.filter-rule-button {
+  border: 1px solid $slate;
+  color: $slate;
+  cursor: pointer;
+  margin: 2px 0;
+  padding: 2px;
+  text-align: center;
+  width: 30px;
+}
+
+.inline-plus {
+  display: none;
+  font-size: 12px;
+  text-align: center;
+  width: 30px;
+}
+
+.filter-rule-divider {
+  display: flex;
+  flex-flow: row;
+  text-align: left;
+  width: 100%;
+}
+
+.filter-rule-divider-text {
+  color: $extra-dark-smoke;
+  text-align: center;
+  width: 30px;
+}
+
+.filter-rule-divider-line {
+  border-bottom: 2px solid $smoke;
+  flex-grow: 1;
+  height: 10px;
+  margin-right: 2px;
+}
+
+.filter-rule-container {
+  .filter-rule-container {
+    border-left: 2px solid $smoke;
+    margin-left: 14px;
+    padding-left: 14px;
+  }
+}
